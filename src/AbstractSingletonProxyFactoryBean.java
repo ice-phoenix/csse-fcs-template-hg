@@ -40,7 +40,7 @@ import org.springframework.util.ClassUtils;
 public abstract class AbstractSingletonProxyFactoryBean extends ProxyConfig
 		implements FactoryBean<Object>, BeanClassLoaderAware, InitializingBean {
 
-	private Object target; //Это русский комментарий, содержащий пробелы
+	private Object target; // Это русский комментарий, содержащий пробелы
 
 	private Class[] proxyInterfaces;
 
