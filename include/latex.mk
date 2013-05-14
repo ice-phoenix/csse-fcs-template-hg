@@ -57,7 +57,7 @@ $(TARGET).pdf: $(TARGET).tex $(TARGETFILES) $(BIBFILE)
 	fi
 	@if [ -f $(BIBFILE) ];\
 	then \
-		for f in *.aux; do $(BIBTEX) $(BIBTEXFLAGS) $$f ; done ;\
+		for f in *.aux; do $(BIBTEX) $(BIBTEXFLAGS) $${f%.aux}; done ;\
 		$(PDFLATEX) $(PDFLATEXFLAGS) $^ ;\
 	else \
 		echo Warning: Bibliography file does not exist ;\
